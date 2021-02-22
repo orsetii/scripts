@@ -9,7 +9,7 @@ do
 		ps aux | grep discord | grep -qv grep 
 		if [ "$?" -eq 0 ]; then
 			echo "Killing Discord"
-			killall Discord
+			killall DiscordCanary || killall Discord
 		fi
 	fi
 	sleep 5
